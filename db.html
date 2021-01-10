@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+
+<script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-app.js"></script>
+
+
+<script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-firestore.js"></script>
+
+<script>
+  var firebaseConfig = {
+    apiKey: "AIzaSyAQCKATlXqtgz2xfLzKhh-Nw72b7UYS1dQ",
+    authDomain: "project-e2c08.firebaseapp.com",
+    projectId: "project-e2c08",
+    storageBucket: "project-e2c08.appspot.com",
+    messagingSenderId: "709586158987",
+    appId: "1:709586158987:web:b9e9e3093c49709d3e1b8e",
+    measurementId: "G-1CCZ6Y48QE"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+
+  const db=firebase.firestore();
+//   console.log(db)
+</script>
+
+
+
+
+<script>
+  db.collection('projects').get().then((snapshot)=>{
+    console.log(snapshot.docs[0])
+  }).catch(err=>{
+      console.log(err);
+  });
+</script>
+</html>
